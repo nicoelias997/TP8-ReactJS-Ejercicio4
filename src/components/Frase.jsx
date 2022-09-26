@@ -1,39 +1,27 @@
-import React from 'react'
-import App from "../App"
+import React from "react";
 
 const Frase = (props) => {
   return (
-    <div className='card-body'>
-        <div className="card bg-white">          
-            <div className="d-flex justify-content-center col-12">
-           <div className="col-3 p-3">
-            <img 
-            src={
-                props.imagen
-            }
-             alt="Homero Simpsons" />
-           </div>
-
-        <div className="col-9 container p-3">
-            <div className="card-title">
-                <h5>
-                  {
-                    props.caracter
-                  }
-                </h5>
-            </div>
-            <div className="card-text">
-              <p>
-              {
-                props.frase
-              }
-              </p> 
-            </div>
-            </div>
-        </div>
-        </div>
+    <div className="container rounded-3 mb-4 mt-4">
+        <section className="d-flex justify-content-center row bg-white">
+        <article className="col-md-4 text-center">
+        <img
+          src={props.imagen}
+          alt={props.caracter}
+          className="p-1"
+        />
+        </article>
+          <article className="col-md-8 justify-content-start p-2">
+        <h5>
+          {props.caracter}
+        </h5>
+        <p>
+          {props.frase}
+        </p>
+        </article>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default Frase
+export default Frase;
